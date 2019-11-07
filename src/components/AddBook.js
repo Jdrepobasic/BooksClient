@@ -53,9 +53,9 @@ const AddBook = () => {
       </div>
       <div>
         <label>Genre</label>
-        <GenreSelect>
-
-        </GenreSelect>
+        <GenreSelect
+          handleChange={(e) => console.log(e)}
+        />
       </div>
       <div>
         <label>Author</label>
@@ -63,7 +63,12 @@ const AddBook = () => {
           options={AuthorsNames} 
           isClearable={true}
           isLoading={loading ? true : false}
+          onChange={(e) => console.log(e)}
         />
+      </div>
+      <div>
+        <label>Does not have author on list?</label>
+        <input type="checkbox" ref={register}/>
       </div>
       <div>
         <label>Year</label>

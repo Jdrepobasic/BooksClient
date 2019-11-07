@@ -58,7 +58,7 @@ const Menu = props => {
   const optionSelectedLength = props.getValue().length || 0;
   return (
     <components.Menu {...props}>
-      {optionSelectedLength < 4 ? (
+      {optionSelectedLength < 40 ? (
         props.children
       ) : (
         <div style={{ margin: 15 }}>Max limit achieved</div>
@@ -67,9 +67,9 @@ const Menu = props => {
   );
 };
 
-export default () => {
+export default (props) => {
   const isValidNewOption = (inputValue, selectValue) =>
-  inputValue.length > 0 && selectValue.length < 4;
+  inputValue.length > 0 && selectValue.length < 40;
 
     return (
     <Select
@@ -79,6 +79,8 @@ export default () => {
       isValidNewOption={isValidNewOption}
       options={genreOptions}
       styles={colourStyles}
+      value={props.selectedOption}
+      onChange={props.handleChange}
     />
   )
 }
