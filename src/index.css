@@ -6,3 +6,7 @@ body {
     sans-serif;
   background: #eee;
 }
+
+.error-message {
+  color: red;
+}

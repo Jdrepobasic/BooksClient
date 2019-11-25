@@ -9,7 +9,8 @@ import AddBook from './components/AddBook';
 // apollo client setup
 
 const client = new ApolloClient({
-  uri:'https://dv-api-books.herokuapp.com/graphql'
+  uri:'http://localhost:8626/graphql'
+  // uri:'https://dv-api-books.herokuapp.com/graphql'
 });
 
 function App() {
